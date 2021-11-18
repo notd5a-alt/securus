@@ -10,6 +10,8 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+
+	secui "github.com/notd5a-alt/securus/ui"
 )
 
 type User struct {
@@ -60,7 +62,7 @@ func handleInput(prefix string) (str string, err error) {
 
 func main() {
 	// Securus interface.
-	fmt.Println("Welcome to goP2P Chat!")
+	secui.Title()
 	var user User
 
 	// create reader to handle input
@@ -78,5 +80,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(handle)
+	fmt.Println("ID Generated: ", user.id)
 }
